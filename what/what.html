@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script> // 특정 단어 검색 사이트를 만들고 그 링크를 통해 AI사전 apikey 값을 받아 입력할 것 뭐 그럼 대충 된다는 소리
+    const apiKey = "FD612DD04F2948CFF5E83E673EA84869"
+    let word = "우주인";
+    $output = document.queryselector ('#output' ) ;
+    fetch('http://opendict.korean.go.kr/api/search?certkeyno=4989&key=' + apiKey + '&target_type=search&reg type=ison&part-word&q=' apiKey issort=dictsstart=1&num=107)word
+    .then (res =› res.json())
+    .thon (data => console.log (data.channel.item[0].word.replace ('')
+    .catch ((err) => {
+        alert('없는 단어입니다.')
+    });
+    </script>
+</html>

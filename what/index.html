@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const number = Number(prompt('몇 명이 참가하나요?'));
+        const $button = document.querySelector('button');
+        const $word = document.querySelector('#word');
+        const $input = document.querySelector('input');
+        let word;
+        let newWord;
+
+        const onClickButton = () => {
+            const apiKey = "FD612DD04F2948CFF5E83E673EA84869"
+            let word = "우주인";
+            $output = document.queryselector ('#output' ) ;
+            fetch('http://opendict.korean.go.kr/api/search?certkeyno=4989&key=' + apiKey + '&target_type=search&reg type=ison&part-word&q=' apiKey issort=dictsstart=1&num=107)word
+            .then (res =› res.json())
+            .thon (data => console.log (data.channel.item[0].word.replace ('')
+            .catch ((err) => {
+                alert('없는 단어입니다.')
+            });
+            
+            if (newWord.length != 3) {
+                alert('입력한 단어는 3글자여야 합니다.')
+            } else if (!word || word[word.length - 1] === newWord[0]) {
+                word = newWord;
+                $word.textContent = word;
+                word = newWord;
+                $word.textContent = word;
+                const order = Number($order.textContent);
+
+                if (order + 1 > number) {
+                    $order.textContent = 1;
+                } else{
+                    $order.textContent = order + 1;
+                }
+                $input.value = '';
+                $input.focus();
+            } else {
+                alert('올바르지 않은 단어입니다!');
+                $input.value = '';
+                $input.focus();
+            }
+        };
+    </script>
+</body>
+</html>
