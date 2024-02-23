@@ -1,0 +1,285 @@
+
+        /* Frame 1 */
+        #frame1>a {
+            position: relative;
+            width: 1920px;
+            height: 1080px;
+            background: #FFFFFF;
+        }
+
+        #vector1>a {
+            position: absolute;
+            width: 127.93px;
+            height: 103.92px;
+            left: 194.76px;
+            top: 110.87px;
+            border: 7px solid #000000;
+            transform: rotate(-22.84deg);
+        }
+
+        #rectangle1>a {
+            position: absolute;
+            width: 1109px;
+            height: 67px;
+            left: 707px;
+            top: 84px;
+            background: #D9D9D9;
+        }
+
+        #home>a {
+            position: absolute;
+            width: 80px;
+            height: 35px;
+            left: 747px;
+            top: 103px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 38px;
+            color: #000000;
+        }
+
+        #notifications>a {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            left: 1700px;
+            top: 99px;
+            background: url(notifications_FILL0_wght400_GRAD0_opsz48.png);
+        }
+
+        #manage_search>a {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            left: 1626px;
+            top: 97px;
+            background: url(manage_search_FILL0_wght400_GRAD0_opsz48.png);
+        }
+
+        #account_circle>a {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            left: 1628px;
+            top: 205px;
+            background: url(account_circle_FILL0_wght400_GRAD0_opsz48.png);
+        }
+
+        #login>a {
+            position: absolute;
+            width: 128.79px;
+            height: 71px;
+            left: 1701px;
+            top: 205px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 48px;
+            color: #000000;
+        }
+
+        #able>a {
+            position: absolute;
+            width: 307px;
+            height: 171px;
+            left: 116px;
+            top: 53px;
+            font-family: 'Istok Web';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 78px;
+            line-height: 112px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #000000;
+        }
+
+        #snowboarding>a {
+            position: absolute;
+            width: 60px;
+            height: 41px;
+            left: 373px;
+            top: 77px;
+            background: url(snowboarding_FILL0_wght400_GRAD0_opsz48.png);
+        }
+
+        #ellipse1>a {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            left: 307px;
+            top: 334px;
+            background: url(mountaineering-ge7cb409f9_1920.jpg);
+        }
+
+        #challenge>a {
+            position: absolute;
+            width: 652px;
+            height: 105px;
+            left: 181px;
+            top: 736px;
+            font-family: 'Istok Web';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 46px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #0E0E0E;
+        }
+
+        #ellipse2>a {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            left: 827px;
+            top: 334px;
+            background: url(pexels-andrea-piacquadio-3807755.jpg);
+        }
+
+        #stories>a {
+            position: absolute;
+            width: 652px;
+            height: 103px;
+            left: 701px;
+            top: 737px;
+            font-family: 'Istok Web';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 46px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #0E0E0E;
+        }
+
+        #ellipse3>a {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            left: 1347px;
+            top: 334px;
+            background: url(pexels-fauxels-3184431.jpg);
+        }
+
+        #friendship>a {
+            position: absolute;
+            width: 652px;
+            height: 95px;
+            left: 1226px;
+            top: 741px;
+            font-family: 'Istok Web';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 46px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #0E0E0E;
+        }
+
+        #group_talk>a {
+            position: absolute;
+            width: 140px;
+            height: 35px;
+            left: 847px;
+            top: 103px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 38px;
+            color: #000000;
+        }
+
+        #bulletin_board>a {
+            position: absolute;
+            width: 192px;
+            height: 35px;
+            left: 1007px;
+            top: 103px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 38px;
+            color: #000000;
+        }
+
+        #schedule>a {
+            position: absolute;
+            width: 117px;
+            height: 35px;
+            left: 1219px;
+            top: 103px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 38px;
+            color: #000000;
+        }
+
+        #introduction>a {
+            position: absolute;
+            width: 158px;
+            height: 35px;
+            left: 1362px;
+            top: 103px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 38px;
+            color: #000000;
+        }
+
+        #FAQ>a {
+            position: absolute;
+            width: 138px;
+            height: 35px;
+            left: 1562px;
+            top: 103px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 38px;
+            color: black !important;
+        }
+
+
+        
+        #img1 {
+            position: absolute;
+            top: 550px;
+            left: 331px;
+            transform: translate( -50%, -50% );
+            
+          }
+
+          #img2 {
+            position: absolute;
+            top: 550px;
+            left: 851px;
+            transform: translate( -50%, -50% );
+            
+          }
+
+          #img3 {
+            position: absolute;
+            top: 550px;
+            left: 1376px;
+            transform: translate( -50%, -50% );
+            
+          }
+
+
+          a { text-decoration-line: none; }

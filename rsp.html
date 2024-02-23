@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>짱께뽀</title>
+    <style>
+        #computer {
+        width : 142px;
+        height : 200px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="computer"></div>
+    <div>
+        <button id="scissors" class="btn">가위</button>
+        <button id="rock" class="btn">바위</button>
+        <button id="paper" class="btn">보</button>
+    </div>
+
+    <div id="score">0</div>
+    <script>
+        const $computer = document.querySelector('#computer')
+        const $socre = document.querySelector('#score')
+        const $rock = document.querySelector('#rock')
+        const $scissors = document.querySelector('#scissors')
+        const $paper = document.querySelector('#paper')
+        const IMC_URL = 'C:\Users\cksrm\OneDrive\바탕 화면\웹 프로그래밍\rsp.png';
+        let computerChoice = 'scissors';
+        const changeComputerHand = () => {
+            let changeComputerHand = setInterval(changeComputerHand, 50);
+            const clickButton = () => {
+                clearInterval(intervalld);  //점수 계산 및 화면에 표시
+                setTimeout(() => {
+                    intervalld = setInterval(changeComputerHand, 50);
+                }, 1000);
+            };
+
+            $rock.addEventListener('click', clickButton);
+            $scissors.addEventListener('click', clickButton);
+            $paper.addEventListener('click', clickButton);
+
+            if (computerChoice === 'rock'){
+                computerChoice = 'scissors';
+            } else if (computerChoice === 'scissors') {
+                computerChoice = 'paper';
+            } else if (computerChoice === 'paper') {
+                computerChoice = 'rock';
+            }
+
+            $computer.style.backgroumd = 'url(${IMG_URL}) $(rspX[computerChoice]) 0';
+            $computer.style.backgroundSize = 'auto 200px'
+
+            setTimeout(changeComputerHand, 50);
+        }
+        setTimeout(changeComputerHand, 50);
+
+        const rspX = {
+            scissorsX : '-0',
+            rockX : '-220px',
+            paperX : '-440px'
+        };
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input readonly id="operator">
+    <input readonly type="number" id="result">
+    
+    <div class="row">
+        <button id="num-7">7</button>
+        <button id="num-8">8</button>
+        <button id="num-9">9</button>
+        <button id="plus">+</button>
+    </div>
+
+    <div class="row">
+        <button id="num-4">4</button>
+        <button id="num-5">5</button>
+        <button id="num-6">6</button>
+        <button id="minus">-</button>
+    </div>
+
+    <div class="row">
+        <button id="num-1">1</button>
+        <button id="num-2">2</button>
+        <button id="num-3">3</button>
+        <button id="divide">/</button>
+    </div>
+
+    <div class="row">
+        <button id="clear">C</button>
+        <button id="num-0">0</button>
+        <button id="multiply">x</button>
+        <button id="calculate">=</button>
+    </div>
+
+    <style>
+        * { box-sizing: border-box}
+        #result { 
+            width: 180px; 
+            height: 50px; 
+            margin: 5px; 
+            text-align: right;
+        }
+
+        #operator {
+            width: 50px; 
+            height: 50px; 
+            margin: 5px; 
+            text-align: center;
+        }
+
+        button {
+            width: 50px; 
+            height: 50px; 
+            margin: 5px;
+        }
+    </style>
+
+    <script>
+        let numOne = '';
+        let operator = '';
+        let numTwo = '';
+
+        const $operator = document.querySelector('#operator');
+        const $result = document.querySelector('#result');
+
+        const onClickNumber = (event) => {
+            if (!operator) { // 첫 번째 숫자가 입력되기 전
+                if (!numOne) {
+                    $result.value = '';
+                }
+                numOne += event.target.textContent;
+                $result.value += event.target.textContent;
+                return;
+            } 
+
+            // 두 번째 숫자가 입려되는 중
+            if (!numTwo){ // 두번 째 숫자의 첫 번째 자리를입력하는 중
+                $result.value=''; //첫 번째 숫자 제외
+            }
+
+            numTwo += event.target.textContent;
+            $result.value += event.target.textContent;
+        };
+
+        const onClickOperator = (e) => {
+            if (numOne) {
+                operator = event.target.textContent;
+                $operator.value = event.target.textContent;
+            } else {
+                alert('숫자를 먼저 입력하세요')
+            }
+        };
+
+        for (let i=0; i<10; i++) {
+            document.querySelector('#num-' + i).addEventListener('click', onClickNumber);
+        } // 숫자관련이벤트 소스 10줄 줄이기
+        
+        /*
+        document.querySelector('#plus').addEventListener('click', onClickOperator);
+        document.querySelector('#minus').addEventListener('click', onClickOperator);
+        document.querySelector('#divide').addEventListener('click', onClickOperator);
+        document.querySelector('#multiply').addEventListener('click', onClickOperator);
+        */
+
+        let op_array=['plus', 'minus', 'divide', 'multiply']
+
+        op_array.forEach( /*function*/(item) => {
+            document.querySelector('#' + item).addEventListener('click', onClickOperator);
+        })
+
+        /* 위코드의 옛날 버전
+        for (i=0; i < 4; i++) {
+            document.querySelector('#' + op_array[i]).addEventListener('click', onClickOperator);
+        } 
+        */
+
+        document.querySelector('#clear').addEventListener('click', () => {
+            numOne = '';
+            numTwo = '';
+            operator = '';
+            $operator.value = '';
+            $result.value = '';
+        });
+
+        document.querySelector('#calculate').addEventListener('click', () => {
+            console.log(numOne, numTwo, operator)
+            if (numTwo) {
+                switch (operator) {
+                    case 'e':
+                        $result.value = parseInt(numOne) + parseInt(numTwo);
+                        break;
+                    case '-' :
+                        $result.value = numOne - numTwo;
+                        break;
+                    case '*' :
+                        $result.value = numOne * numTwo;
+                        break;
+                    case '/' :
+                        $result.value = numOne / numTwo;
+                        break;
+                    default :
+                        break;
+                }
+            } else {
+                alert('숫자를 먼저 입력하세요.');
+            }
+        });
+    </script>
+</body>
+</html>

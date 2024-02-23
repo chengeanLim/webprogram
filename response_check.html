@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>반응속도</title>
+
+    <style>
+        #screen {
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            user-select: none;
+        }
+
+        #screen.waiting {
+            background-color: aqua;
+            color: white;
+        }
+
+        #screen.now {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="screen" class="waiting">클릭해서 시작하세요</div>
+    <div id="result"></div>
+
+    <script>
+        const $screen = document.querySelector('#screen');
+        const $result = document.querySelector('#result');
+        let startTime;
+        let endTime;
+        const records = [];
+
+        $screen.addEventListener('click', function () {
+            if ($screen.classList.contains('waiting')) { //대기화면출력
+                $screen.classList.remove('waiting');
+                $screen.classList.add('ready');
+                $screen.textContent = '초록색이 되면 클릭하세요';
+
+                setTimeout(function () {
+                    startTime = new Data();
+                    $screen.classList.remove('ready');
+                    $screen.classList.add('now');
+                    $screen.textContent = '클릭하세요!';
+                }, Math.floor(Math.random() * 1000) + 2000); //2000~3000 사이 수
+            } else if ($screen.classList.contains('ready')) { // 준비 화면
+            } else if ($screen.classList.contains('now')) { // 클릭화면
+                endtTime = new Data();
+                const current = endTime - startTime;
+                records.push(current);
+                const average = records.reduce((a, c) => a + c) /records.length;
+                $result.textContent = '현재 $(current)ms, vudrbs : $(average)ms';
+                $screen.classList.remove('ready');
+                $screen.classList.add('now');
+                $screen.textContent = '클릭해서 시작하세요';
+                startTime = null;
+                endTime = null;
+            }
+        });
+    </script>
+</body>
+</html>

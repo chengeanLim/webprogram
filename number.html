@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="input">
+        <input type="text" id="input">
+        <button> 확인 </button>
+    </form>
+
+    <div id="logs"></div>
+
+    <script>
+        const $input = document.querySelector('#input');
+        const $form = document.querySelector('#form');
+        const $logs = document.querySelector('#logs');
+
+        const number = [];
+        for (let n = 1; n <=9; n +=1) {
+            number.push(n);
+        }
+
+        const answer = [];
+        for (let n = 1; n <=3; n +=1) {
+            const index = Math.floor(Math.random()* number.length);
+            answer.push(numbers[index]);
+            number.splice(index, 1);
+        }
+
+        console.log(answer);
+
+        const tries = [];
+        function checkInput(input) {}
+        $form.addEventListener('submit',(event) =>{
+            event.preventDefault();
+            const value = $input.value;
+            $input.value = '';
+            const valid = checkInput(value);
+        });
+    </script>
+</body>
+</html>
